@@ -4,7 +4,6 @@ import {
   ElementRef,
   EventEmitter,
   Input,
-  OnInit,
   Output,
   Renderer2,
   ViewChild
@@ -37,7 +36,7 @@ import {
       }
       const elem = this.renderer.createElement('mat-icon');
       const icon = this.checked ? 'done' : 'remove';
-      elem.setAttribute('class', 'mat-icon notranslate material-icons mat-icon-no-color light-mode-switch-icon');
+      elem.setAttribute('class', 'mat-icon notranslate material-icons mat-icon-no-color done-switch-icon');
       elem.textContent = icon
       targetSpan.appendChild(elem);
     }
@@ -49,8 +48,4 @@ import {
     this.toggleChange.emit(event.checked)
   }
 
-  toggle(event: any) {
-    console.log(event)
-
-  }
 }
